@@ -271,6 +271,11 @@ export default [
         keywords: ['image', 'img'],
       }),
       new Page({
+        path: '/klogo',
+        title: 'KLogo',
+        isCode: true,
+      }),
+      new Page({
         path: '/klabeledicon',
         title: 'KLabeledIcon',
         isCode: true,
@@ -386,6 +391,11 @@ export default [
         title: 'KTransition',
         isCode: true,
         keywords: ['transition'],
+      }),
+      new Page({
+        path: '/ktexttruncator',
+        title: 'KTextTruncator',
+        isCode: true,
       }),
     ],
   }),

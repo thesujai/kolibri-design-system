@@ -2,7 +2,7 @@
 
   <UiPopover
     ref="popover"
-    :z-index="12"
+    :z-index="99"
     :containFocus="true"
     :dropdownPosition="position"
     @close="handleClose"
@@ -123,6 +123,7 @@
           sibling ? this.$nextTick(() => sibling.focus()) : this.$nextTick(() => this.setFocus());
           // if a TAB key, not an arrow key, close the popover and advance to next item in the tab index
         } else if ((event.key == 'Tab' || event.keyCode == 9) && popoverIsOpen) {
+          this.$emit('tab', event);
           this.closePopover();
         }
       },
@@ -134,6 +135,7 @@
         this.closePopover();
       },
       closePopover() {
+        this.$emit('close');
         this.$refs.popover.close();
       },
       focusOnButton() {

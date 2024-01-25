@@ -5,6 +5,7 @@
       :src="src"
       :alt="alternateText"
       :style="styleObject"
+      @error="onError"
     >
     <slot></slot>
   </div>
@@ -80,6 +81,14 @@
         type: [Number, String],
         default: undefined,
       },
+      /**
+       * Accepts a Vue dynamic styles object to override the default styles to modify the appearance of the component.
+       * It's attributes always take precedence over any specified styling (internal component's styles, styles calculated from props etc.)
+       */
+      appearanceOverrides: {
+        type: Object,
+        default: () => ({}),
+      },
     },
     data() {
       return {
@@ -90,6 +99,7 @@
           minHeight: this.imgMinHeight,
           maxWidth: this.imgMaxWidth,
           minWidth: this.imgMinWidth,
+          ...this.appearanceOverrides,
         },
       };
     },
@@ -151,6 +161,12 @@
             }
           }
         }
+      },
+      onError(event) {
+        /**
+         * Emitted when the image fails to load. The DOM event that triggered the error is available in the payload.
+         */
+        this.$emit('error', event);
       },
     },
   };

@@ -1,49 +1,334 @@
-<!-- 
-
-Changelog Guidelines
-
-- In contrast to release notes, changelog is detailed and contains all pull requests
-- Add the newest item to the top
-- If there are more groups of closely related changes in a pull request,
-  write more changelog items for each one of them. At a minimum, always separete
-  non-breaking changes from breaking changes
-- Copy-paste and fill in the template below for each changelog item. When doing so, please
-  pay attention to the following:
-  - Be explicit and include all affected areas (e.g. if you update `KIcon`,
-    all other components built on top of that, like `KLabeledIcon` or `KIconButton`,
-    might be affected too)
-  - Breaking updates are not only updates literally breaking a consumer but also updates
-    causing major, unexpected UI changes
-  - Focus on 'what', not 'how'  (you can mention how you solved a problem if it feels important,
-    however always emphasize what problem you solved and what impact it will have on consumers)
-  - Formulate information so that it can be easily understood even by a person who is not
-    familiar with the change in detail
-  - Consistency (see existing items)
-
-****************************
-
-- [PR no]
-  - **Description:** Summary of change(s)
-  - **Products impact:** Choose from - none (for internal updates) / bugfix / new API / updated API / removed API. If it's 'none', use "-" for all items below to indicate they are not relevant.
-  - **Addresses:** Link(s) to GH issue(s) addressed. Include KDS links as well as links to related issues in a consumer product repository too.
-  - **Components:** Affected public KDS component. Do not include internal sub-components or documentation components.
-  - **Breaking:** Will this change break something in a consumer? Choose from: yes / no
-  - **Impacts a11y:** Does this change improve a11y or adds new features that can be used to improve it? Choose from: yes / no
-  - **Guidance:** Why and how to introduce this update to a consumer? Required for breaking changes, appreciated for changes with a11y impact, and welcomed for non-breaking changes when relevant.
-
-[PR no]: [PR ref]
-
-****************************
-
--->
-
 # Changelog
 
 Changelog is rather internal in nature. See release notes for the public overview and guidelines. Releases are recorded as git tags in the [Github releases](https://github.com/learningequality/kolibri-design-system/releases) page.
 
-## Version 1.5.x
+## Upcoming version
 
-<!-- Release notes prepared for all items below -->
+<!-- Put all new updates into this section, please -->
+
+
+## Version 3.0.0
+
+- [#522]
+  - **Description:** Upgrades github-actions/cache dependency
+  - **Products impact:** Dev dependency upgrade
+  - **Addresses:** -
+  - **Components:** -
+  - **Breaking:** no
+  - **Impacts a11y:** no
+  - **Guidance:** -
+
+[#522]: https://github.com/learningequality/kolibri-design-system/pull/522
+
+- [#518]
+  - **Description:** Add testing for KImg component
+  - **Products impact:** none
+  - **Addresses:** https://github.com/learningequality/kolibri-design-system/issues/512
+  - **Components:** -
+  - **Breaking:** no
+  - **Impacts a11y:** no  - 
+  - **Guidance:** -
+
+[#518]: https://github.com/learningequality/kolibri-design-system/pull/518
+
+- [#521]
+  - **Description:** Move date-fns dependency to depencies rather than dev-dependencies.
+  - **Products impact:** bugfix
+  - **Addresses:** N/A
+  - **Components:** KDateRange/KDateInput
+  - **Breaking:** no
+  - **Impacts a11y:** no
+  - **Guidance:** ~
+
+[#521]: [https://github.com/learningequality/kolibri-design-system/pull/521]
+
+- [#509]
+  - **Description:** Introduces `appearanceOverrides` prop for the `KImg` component
+  - **Products impact:** new API 
+  - **Addresses:** https://github.com/learningequality/kolibri-design-system/issues/371
+  - **Components:** KImg
+  - **Breaking:** No
+  - **Impacts a11y:** No
+  - **Guidance:** -
+
+[#509]: https://github.com/learningequality/kolibri-design-system/pull/509
+
+- [#516]
+  - **Description:** Upgrades follow-redirects dependency
+  - **Products impact:** Dependency upgrade
+  - **Addresses:** -
+  - **Components:** -
+  - **Breaking:** no
+  - **Impacts a11y:** no
+  - **Guidance:** -
+
+[#516]: https://github.com/learningequality/kolibri-design-system/pull/516
+
+- [#508]
+  - **Description:** Update Github maintained github actions to latest versions
+  - **Products impact:** -
+  - **Addresses:** -
+  - **Components:** -
+  - **Breaking:** no
+  - **Impacts a11y:** no  
+  - **Guidance:** -
+
+[#508]: https://github.com/learningequality/kolibri-design-system/pull/508
+
+- [#502]
+  - **Description:** Add dispatching of 'error' event when failed to load image for 'KImg'
+  - **Products impact:** new API
+  - **Addresses:** https://github.com/learningequality/kolibri-design-system/issues/372
+  - **Components:** KImg
+  - **Breaking:** no
+  - **Impacts a11y:** yes  
+  - **Guidance:** Allows the consumer to hook into the lifecycle of 'KImg' and handle the cases when the image fails to load
+
+[#502]: https://github.com/learningequality/kolibri-design-system/pull/502
+
+- [#505]
+  - **Description:**  Added custom implementation of GH action that checks that changelog is updated in each pull request
+  - **Products impact:** none
+  - **Addresses:** https://github.com/learningequality/kolibri-design-system/issues/481
+  - **Components:** -
+  - **Breaking:** 
+  - **Impacts a11y:** 
+  - **Guidance:** -
+
+[#505]: https://github.com/learningequality/kolibri-design-system/pull/505
+
+- [#493]
+  - **Description:** Changed the value of z-index of KDropdownMenu to 99.
+  - **Products impact:** Bugfix
+  - **Addresses:** https://github.com/learningequality/kolibri-design-system/issues/486
+  - **Components:** KDropdownMenu
+  - **Breaking:** No
+  - **Impacts a11y:** No
+  - **Guidance:** -
+
+[#493]: https://github.com/learningequality/kolibri-design-system/pull/493
+
+- [#500]
+  - **Description:** Upgrades vue-router dependency
+  - **Products impact:** Dependency upgrade
+  - **Addresses:** -
+  - **Components:** -
+  - **Breaking:** no
+  - **Impacts a11y:** no
+  - **Guidance:** -
+
+[#500]: https://github.com/learningequality/kolibri-design-system/pull/500
+
+- [#421]
+  - **Description:** Upgrades kolibri-tools dependency and removes KDS' circular dependency on itself
+  - **Products impact:** Dependency upgrade
+  - **Addresses:** -
+  - **Components:** -
+  - **Breaking:** no
+  - **Impacts a11y:** no
+  - **Guidance:** -
+
+[#421]: https://github.com/learningequality/kolibri-design-system/pull/421
+
+- [#499]
+  - **Description:** Upgrades @babel/traverse dependency to address security vulnerability
+  - **Products impact:** Dependency upgrade
+  - **Addresses:** -
+  - **Components:** -
+  - **Breaking:** no
+  - **Impacts a11y:** no
+  - **Guidance:** -
+
+[#499]: https://github.com/learningequality/kolibri-design-system/pull/499
+
+- [#467]
+  - **Description:** Upgrades word-wrap dependency to address security vulnerability
+  - **Products impact:** Dependency upgrade
+  - **Addresses:** -
+  - **Components:** -
+  - **Breaking:** no
+  - **Impacts a11y:** no
+  - **Guidance:** -
+
+[#467]: https://github.com/learningequality/kolibri-design-system/pull/467
+
+- [#483]
+  - **Description:** Upgrades browserify-sign dependency to address security vulnerability
+  - **Products impact:** Dependency upgrade
+  - **Addresses:** -
+  - **Components:** -
+  - **Breaking:** no
+  - **Impacts a11y:** no
+  - **Guidance:** -
+
+[#483]: https://github.com/learningequality/kolibri-design-system/pull/483
+
+- [#494]
+  - **Description:** Update contributing guidelines
+  - **Products impact:** none
+  - **Addresses:** -
+  - **Components:** -
+  - **Breaking:** -
+  - **Impacts a11y:** -
+  - **Guidance:** -
+
+[#494]: [https://github.com/learningequality/kolibri-design-system/pull/494]
+
+- [#492]
+  - **Description:** Add autofocus directive on KRadioButton to fix autofocus behavior on dynamic rendering.
+  - **Products impact:** bugfix
+  - **Addresses:** https://github.com/learningequality/kolibri-design-system/issues/489
+  - **Components:** KRadioButton
+  - **Breaking:** no
+  - **Impacts a11y:** yes
+  - **Guidance:** Add "autofocus" prop on KRadioButton. This change improves keyboard navigation on forms where a KRadioButton jumps into the DOM.
+
+[#492]: https://github.com/learningequality/kolibri-design-system/pull/492
+
+- [#497]
+  - **Description:** KDropdownMenu now emits a @tab event when the user hits the [Tab] key and a @close event when the menu is closed programmatically. Additionally, a new icon for Expand All was added and can be used just like any other icon with the "expandAll" name.
+  - **Products impact:** updated API
+  - **Addresses:** -
+  - **Components:** KDropdownMenu
+  - **Breaking:** No
+  - **Impacts a11y:** yes
+  - **Guidance:**  The @tab event can be used for more precise focus management as the popover by default could end up sending focus to the root HTML element by default. Note that the browser event is passed to the handler function, so you may need/want to call `preventDefault()` on that event depending on your use case.
+
+  [#497]: https://github.com/learningequality/kolibri-design-system/pull/497
+
+- [#491]
+  - **Description:** Replaced setTimeout with requestAnimationFrames in tests for useKWindowDimensions and useKResponsiveWindow
+  - **Products impact:** -
+  - **Addresses:** https://github.com/learningequality/kolibri-design-system/issues/480
+  - **Components:** none
+  - **Breaking:** no
+  - **Impacts a11y:** no
+  - **Guidance:** -
+
+  [#491]: [https://github.com/learningequality/kolibri-design-system/pull/491]
+
+- [#478]
+  - **Description:** Changed _dev-only to dev-only
+  - **Products impact:** -
+  - **Addresses:** https://github.com/learningequality/kolibri-design-system/issues/474
+  - **Components:** none
+  - **Breaking:** no
+  - **Impacts a11y:** no
+  - **Guidance:** -
+
+  [#478]: https://github.com/learningequality/kolibri-design-system/pull/478
+
+- [#482]
+  - **Description:** Changed develop branch to main branch in Readme
+  - **Products impact:** -
+  - **Addresses:** https://github.com/learningequality/kolibri-design-system/issues/479
+  - **Components:** none
+  - **Breaking:** no
+  - **Impacts a11y:** no
+  - **Guidance:** -
+
+  [#482]: https://github.com/learningequality/kolibri-design-system/pull/482
+
+- [#485]
+  - **Description:** Updated KRadioButton 'value' prop to 'buttonValue'
+  - **Products impact:** Updated API
+  - **Addresses:** https://github.com/learningequality/kolibri-design-system/issues/379
+  - **Components:** KRadioButton
+  - **Breaking:** Yes
+  - **Impacts a11y:** 
+  - **Guidance:** KRadioButton 'value' prop is deprecated. Please use the 'buttonValue' prop instead.
+ 
+  [#485]: https://github.com/learningequality/kolibri-design-system/pull/485
+
+## Version 2.0.0
+
+- [#464]
+  - **Description:** Add KTextTruncator
+  - **Products impact:** new API
+  - **Addresses:** https://github.com/learningequality/kolibri-design-system/issues/450
+  - **Components:** KTextTruncator
+  - **Breaking:** no
+  - **Impacts a11y:** no
+  - **Guidance:** -
+
+[#464]: https://github.com/learningequality/kolibri-design-system/pull/464
+
+- [#460]
+  - **Description:** Add KLogo
+  - **Products impact:** new API
+  - **Addresses:** https://github.com/learningequality/kolibri-design-system/issues/373
+  - **Components:** KLogo
+  - **Breaking:** no
+  - **Impacts a11y:** no
+  - **Guidance:** -
+
+[#460]: https://github.com/learningequality/kolibri-design-system/pull/460
+
+- [#470]
+  - **Description:** Fix bug and add test guard in MediaQuery implementation
+  - **Products impact:** none
+  - **Addresses:** -
+  - **Components:** none
+  - **Breaking:** no
+  - **Impacts a11y:** no
+  - **Guidance:** -
+
+[#470]: https://github.com/learningequality/kolibri-design-system/pull/470
+
+- [#469]
+  - **Description:** Throttle the resize listener handler
+  - **Products impact:** updated API
+  - **Addresses:** https://github.com/learningequality/kolibri-design-system/issues/461
+  - **Components:** useKResponsiveWindow
+  - **Breaking:** no
+  - **Impacts a11y:** no
+  - **Guidance:** -
+
+[#469]: https://github.com/learningequality/kolibri-design-system/pull/469
+
+- [#472]
+  - **Description:** Fix useKShow bug and add tests
+  - **Products impact:** bugfix
+  - **Addresses:** -
+  - **Components:** useKShow
+  - **Breaking:** no
+  - **Impacts a11y:** no
+  - **Guidance:** -
+
+[#472]: https://github.com/learningequality/kolibri-design-system/pull/472
+
+- [#463]
+  - **Description:** Add deprecation warning for KResponsiveWindowMixin
+  - **Products impact:** updated API
+  - **Addresses:** https://github.com/learningequality/kolibri-design-system/issues/459
+  - **Components:** KResponsiveWindowMixin
+  - **Breaking:** no
+  - **Impacts a11y:** no
+  - **Guidance:** useKResponsiveWindow composable should be used instead
+
+[#463]: https://github.com/learningequality/kolibri-design-system/pull/463
+
+- [#462]
+  - **Description:** Fix internal links in design system documentation
+  - **Products impact:** none
+  - **Addresses:** https://github.com/learningequality/kolibri-design-system/pull/423
+  - **Components:** none
+  - **Breaking:** no
+  - **Impacts a11y:** no
+  - **Guidance:** -
+
+[#462]: https://github.com/learningequality/kolibri-design-system/pull/462
+
+- [#453]
+  - **Description:** Fix sidepanel opening in Kolibri Library page after resizing window
+  - **Products impact:** bugfix
+  - **Addresses:** https://github.com/learningequality/kolibri/issues/11212
+  - **Components:** `useKResponsiveWindow` (composable)
+  - **Breaking:** no
+  - **Impacts a11y:** no
+  - **Guidance:** -
+
+[#453]: https://github.com/learningequality/kolibri-design-system/pull/453
 
 - [#449]
   - **Description:** Fix textbox being unexpectedly focused after the first page load
@@ -54,6 +339,8 @@ Changelog is rather internal in nature. See release notes for the public overvie
   - **Impacts a11y:** yes
   - **Guidance:** -
 
+[#449]: https://github.com/learningequality/kolibri-design-system/pull/449
+
 - [#450]
   - **Description:** Add new changelog and GH action to check that the changelog is updated in each pull request
   - **Products impact:** -
@@ -62,6 +349,8 @@ Changelog is rather internal in nature. See release notes for the public overvie
   - **Breaking:** -
   - **Impacts a11y:** -
   - **Guidance:** -
+
+[#450]: https://github.com/learningequality/kolibri-design-system/pull/450
 
 - [#448]
   - **Description:** Adds `KTransition`
@@ -72,6 +361,9 @@ Changelog is rather internal in nature. See release notes for the public overvie
   - **Impacts a11y:** no
   - **Guidance:** Exposes predefined set of transitions built on top of Vue's `<transition>`
 
+[#448]: https://github.com/learningequality/kolibri-design-system/pull/448
+
+
 - [#448]
   - **Description:** Add a new prop, `disableDefaultTransition`, to `KCircularLoader`
   - **Products impact:** new API
@@ -80,6 +372,8 @@ Changelog is rather internal in nature. See release notes for the public overvie
   - **Breaking:** no
   - **Impacts a11y:** no
   - **Guidance:** You can use the new prop to prevent from glitches when using the loader in tandem with another component, both of them wrapped in a transition
+
+[#448]: https://github.com/learningequality/kolibri-design-system/pull/448
 
 - [#448]
   - **Description:** Rename `KCircularLoader`'s `show` prop to `shouldShow`
@@ -214,7 +508,7 @@ Changelog is rather internal in nature. See release notes for the public overvie
 [#426]: https://github.com/learningequality/kolibri-design-system/pull/426
 
 - [#426]
-  - **Description:** Fix `KTabsList` focus state 
+  - **Description:** Fix `KTabsList` focus state
   - **Products impact:** bugfix
   - **Addresses:** -
   - **Components:** `KTabsList`, `KTabs`
@@ -338,7 +632,7 @@ Changelog is rather internal in nature. See release notes for the public overvie
   - **Description:** Fix `KDropdownMenu` not showing after its refactor in [#346] by adding missing template tags to `KButton`
   - **Products impact:** bugfix
   - **Addresses:** https://github.com/learningequality/kolibri/issues/9754
-  - **Components:** `KDropdownMenu`, `KButton` 
+  - **Components:** `KDropdownMenu`, `KButton`
   - **Breaking:** no
   - **Impacts a11y:** no
   - **Guidance:** -
